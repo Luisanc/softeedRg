@@ -40,6 +40,14 @@ a {
     color: #62669C;
 }
 
+.green {
+    background-color: #00AE50;
+}
+
+.purple {
+    background-color: #5246F2;
+}
+
 p {
     font-size: 0.9em;
 }
@@ -258,7 +266,7 @@ header .container .right .signup a:hover {
 
 /* --- Profiles --- */
 
-.banner-profile {
+.banner-profile,.my-profile .banner-profile {
     height: 300px;
     background-color: #1D2338;
     display: flex;
@@ -267,13 +275,13 @@ header .container .right .signup a:hover {
     font-family: 'Open Sans', sans-serif;
 }
 
-.banner-profile .container {
+.banner-profile .container , .my-profile .banner-profile .container {
     display: flex;
     flex-direction: row;
     justify-content: center;    
 }
 
-.banner-profile .container .profile-picture {
+.banner-profile .container .profile-picture, .my-profile .banner-profile .container .profile-picture  {
     width: 20%;
     height: inherit;    
     display: flex;
@@ -282,12 +290,12 @@ header .container .right .signup a:hover {
     align-items: center;        
 }
 
-.banner-profile .container .profile-picture img {
+.banner-profile .container .profile-picture img, .my-profile .banner-profile .container .profile-picture img {
     height: 60%;
     border-radius: 50%;
 }
 
-.banner-profile .container .information {
+.banner-profile .container .information, .my-profile .banner-profile .container .information {
     width: 80%;
     height: inherit;    
     color: #ffffff;
@@ -295,32 +303,32 @@ header .container .right .signup a:hover {
     flex-direction: column;
     justify-content: center;
 }
-.banner-profile .container .information .name h2{
+.banner-profile .container .information .name h2, .my-profile .banner-profile .container .information .name h2{
     font-weight: 600;
     padding: 5px 0px 5px 0px;
 }
 
-.banner-profile .container .information .school h3{
+.banner-profile .container .information .school h3, .my-profile .banner-profile .container .information .school h3{
     font-weight: 500;
     padding: 5px 0px 5px 0px;
 }
 
-.banner-profile .container .information .location{
+.banner-profile .container .information .location, .my-profile .banner-profile .container .information .location{
     display: flex;
     flex-direction: row;
     height: auto;
     padding: 5px 0px 5px 0px;
 }
 
-.banner-profile .container .information .location h4{
+.banner-profile .container .information .location h4, .my-profile .banner-profile .container .information .location h4{
     font-weight: 500 bold;
 }
 
-.banner-profile .container .information .location i{
+.banner-profile .container .information .location i, .my-profile .banner-profile .container .information .location i{
     margin-left: 10px;
 }
 
-.banner-profile .container .information .about p{
+.banner-profile .container .information .about p, .my-profile .banner-profile .container .information .about p{
     width: 90%;    
     text-align: justify;
     font-weight: 300;
@@ -328,13 +336,13 @@ header .container .right .signup a:hover {
 }
 
 
-.banner-profile .container .information .social i {
+.banner-profile .container .information .social i, .my-profile .banner-profile .container .information .social i {
     color: #719CFC;
     font-size: 1.2em;
     padding: 5px 5px 5px 5px;
 }
 
-.projects, .summary {
+.projects, .summary, .my-profile .projects, .my-profile .summary {
     height: auto;
     display: flex;
     flex-direction: row;
@@ -343,7 +351,7 @@ header .container .right .signup a:hover {
     font-family: 'Open Sans', sans-serif;        
 }
 
-.projects .container, .summary .container {
+.projects .container, .summary .container, .my-profile .projects .container, .my-profile .summary .container {
     background-color: #ffffff;
     height: auto;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -352,16 +360,16 @@ header .container .right .signup a:hover {
     align-items: center;    
 }
 
-.projects .container .title, .summary .container .title {
+.projects .container .title, .summary .container .title, .my-profile .projects .container .title, .my-profile .summary .container .title  {
     width: 100%;    
 }
 
-.projects .container .title h2, .summary .container .title h2 {    
+.projects .container .title h2, .summary .container .title h2, .my-profile .projects .container .title h2, .my-profile .summary .container .title h2 {    
     padding: 20px 2px 20px 20px;
     font-size: 1.5em;
 }
 
-.projects .container .grid {
+.projects .container .grid, .my-profile .projects .container .grid {
     width: 100%;
     height: auto;
     margin: 5px 0px 25px 0px;
@@ -370,11 +378,11 @@ header .container .right .signup a:hover {
     justify-content: space-around;
 }
 
-.projects .container .grid .card {
+.projects .container .grid .card, .my-profile .projects .container .grid .card {
     position: relative;
 }
 
-.projects .container .grid .card .card-cover {    
+.projects .container .grid .card .card-cover, .my-profile .projects .container .grid .card .card-cover {    
     position: absolute;
     top: 0;
     right: 0;
@@ -391,27 +399,51 @@ header .container .right .signup a:hover {
     align-items: center;
 }
 
-.projects .container .grid .card .card-cover a {
+.projects .container .grid .card .card-cover a, .my-profile .projects .container .grid .card .card-cover a {
     color: #ffffff;
     text-transform: uppercase;
 }
 
-.projects .container .grid .card:hover .card-cover {
+.projects .container .grid .card:hover .card-cover, .my-profile .projects .container .grid .card:hover .card-cover {
 	opacity: 1;
 }
 
-.projects .container .grid .card img {
+.projects .container .grid .card img, .my-profile .projects .container .grid .card img {
     width: 100%;  
     display: flex;        
 }
 
-.summary .container .content {
+.my-profile .projects .container .add-project, .my-profile .summary .container .add-project {
+    display: flex;
+    justify-content: center;
+    padding: 0px 0px 25px 0px;
+}
+
+.my-profile .projects .container .add-project a, .my-profile .summary .container .add-project a{
+    display: flex;
+    justify-content: center;
+    align-items: center;        
+    border-radius: 5px;    
+    color: #ffffff;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    border: 1px solid lightgray;
+    transition: color, background-color 0.5s;
+    padding: 10px 20px;
+} 
+
+.my-profile .projects .container .add-project a:hover, .my-profile .summary .container .add-project a:hover {
+    background-color: #62669C;
+}
+
+.summary .container .content, .my-profile .summary .container .content {
     display: flex;
     flex-direction: column;
     justify-content: center;    
 }
 
-.summary .container .content p {
+.summary .container .content p, .my-profile .summary .container .content p {
     width: 95%;
     padding: 0px 2px 10px 20px;
     font-size: 0.9em;
@@ -473,7 +505,8 @@ header .container .right .signup a:hover {
 }
 
 .viewer-project .container .left .description p {
-    width: 95%;    
+    width: 95%;
+    padding: 0px 0px 25px 0px;
 }
 
 .viewer-project .container .right {
@@ -591,7 +624,7 @@ header .container .right .signup a:hover {
     padding: 5px;
 }
 
-.viewer-project .container .right .tags {
+.viewer-project .container .right .tags, .students-showcase .container .left .card .tags {
     height: auto;
     display: flex;
     flex-direction: row;
@@ -601,7 +634,7 @@ header .container .right .signup a:hover {
     border-bottom: 1px solid lightgray;
 }
 
-.viewer-project .container .right .tags .tag {
+.viewer-project .container .right .tags .tag, .students-showcase .container .left .card .tags .tag {
     padding: 0px 8px;
     background-color: #eceff5;
     line-height: 25px;
@@ -609,8 +642,572 @@ header .container .right .signup a:hover {
     
 }
 
-.viewer-project .container .right .tags .tag a {
+.viewer-project .container .right .tags .tag a, .students-showcase .container .left .card .tags .tag a {
     font-size: 10px;
     color: #a1a8af;
     text-transform: uppercase;    
 }
+
+/* --- End Projects --- */
+
+
+/* --- ShowCase Projects --- */
+
+.showcase-banner {
+    display: flex;
+    height: auto;
+    justify-content: center;
+    background: linear-gradient(270deg, #5865b8, #3182d3);
+    background-size: 400% 400%;
+    -webkit-animation: Legend 6s ease infinite;
+    -moz-animation: Legend 6s ease infinite;
+    -o-animation: Legend 6s ease infinite;
+    animation: Legend 6s ease infinite;
+}
+
+@-webkit-keyframes Legend {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes Legend {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-o-keyframes Legend {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes Legend { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.showcase-banner .container .legend, .students-banner .container .legend {    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0px;
+}
+
+.showcase-banner .container .legend h2, .students-banner .container .legend h2 {
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 2em;
+}
+
+.showcase-search { 
+    display: flex;
+    justify-content: center;
+}
+
+.showcase-search form {   
+    width: 50%;    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0px 0px 30px 0px;    
+}
+
+
+.showcase-search form input[type="text"] {
+    width: 80%;
+    padding: 10px 22px 10px 22px;
+    border: 0px solid lightgray;
+    border-radius: 50px;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: gray;
+    outline: none;    
+}
+
+.showcase-search form input[type="submit"] {
+    width: 20%;
+    padding: 10px 22px 10px 22px;
+    border: 0px solid lightgray;
+    border-radius: 50px;
+    transition: color, background-color 0.5s;
+    font-weight: 300;    
+    background-color: #5246F2;
+    color: #ffffff;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;    
+}
+
+.showcase-search form input[type="submit"]:hover {
+    background-color: white;
+    color: #5246F2;    
+}
+
+
+.showcase-categories {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    padding-bottom: 50px;
+}
+
+.showcase-categories .categories {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;     
+}
+
+.showcase-categories .categories .category {
+    width: 20%;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.showcase-categories .categories .category img{
+    width: 64px;
+    padding: 15px 0px;
+}
+
+.showcase-categories .categories .category a {
+    color: white;
+}
+
+.showcase-projects {
+    display: flex;
+    justify-content: center;        
+    padding: 30px 0px;
+}
+
+.showcase-projects .row {    
+    height: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 0px;
+}
+
+.showcase-projects .row .card {
+    width: 260px;
+    height: 400px;
+    background: white;
+    border: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.showcase-projects .row .card .title, .showcase-projects .row .card .description, .showcase-projects .row .card .view {
+    width: 90%;
+}
+
+.showcase-projects .row .card .title h4 {
+    font-weight: 600;
+    color: darkslategray;
+    text-align: justify;
+}
+
+.showcase-projects .row .card .title p {
+    font-weight: 600;
+    font-size: 0.8em;
+    padding: 5px 0px;
+    
+}
+
+.showcase-projects .row .card .description p {
+    color: gray;
+    text-align: justify;
+}
+
+.showcase-projects .row .card .view {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: inherit;
+}
+
+.showcase-projects .row .card .view a {
+    height: 20px;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    background-color: #00AE50;
+    border: 1px solid lightgray;
+    transition: color, background-color 0.5s;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.showcase-projects .row .card .view a:hover {
+    background-color: #008b40;
+}
+
+.showcase-next {
+    display: flex;
+    justify-content: center;
+    padding: 0px 0px 30px 0px;
+}
+
+.showcase-next .container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.showcase-next .container a {
+    padding: 10px 50px;
+    background-color: white;
+    border: 2px solid lightgray;
+    transition: background-color, color 0.8s;
+}
+
+.showcase-next .container a:hover {
+    background-color: #62669C;
+    color: white;
+}
+
+/* --- End ShowCase Projects --- */
+
+/* --- Students --- */
+
+.students-banner {
+    display: flex;
+    height: auto;
+    justify-content: center;
+    background: linear-gradient(270deg, #ef7078, #fdbe92);
+    background-size: 400% 400%;
+    -webkit-animation: Students 6s ease infinite;
+    -moz-animation: Students 6s ease infinite;
+    -o-animation: Students 6s ease infinite;
+    animation: Students 6s ease infinite;
+}
+    
+@-webkit-keyframes Students {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes Students {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-o-keyframes Students {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes Students { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.students-showcase {
+    display: flex;
+    justify-content: center;
+    height: 500px;
+}
+
+.students-showcase .container {
+    display: flex;
+}
+
+.students-showcase .container .left {
+    width: 80%;
+    height: inherit;
+    height: 100%;
+    overflow-y: scroll; 
+}
+
+.students-showcase .container .left::-webkit-scrollbar {
+    width: 0.5em;    
+}
+ 
+.students-showcase .container .left::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);    
+}
+ 
+.students-showcase .container .left::-webkit-scrollbar-thumb {
+    background-color: #5246F2;
+    outline: 1px solid slategrey;
+    border-radius: 5px;
+}
+
+.students-showcase .container .left .card {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #e5e5e5;
+    margin: 10px 0px;
+    padding: 5px 0px;
+}
+
+.students-showcase .container .left .card .image {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.students-showcase .container .left .card .image img {
+    height: 100px;
+    border-radius: 50%;
+}
+
+.students-showcase .container .left .card .information {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.students-showcase .container .left .card .information .title h3 {
+    font-weight: 500;
+    padding: 5px 0px;
+}
+
+.students-showcase .container .left .card .information .title h4 {
+    font-weight: 400;
+    font-size: 0.9em;
+    padding: 5px 0px;
+}
+
+.students-showcase .container .left .card .location p {
+    padding: 5px 0px;
+    font-size: 0.8em;
+}
+
+.students-showcase .container .left .card .tags {
+    width: 80%;
+    border: none;
+    justify-content: space-between;
+}
+
+.students-showcase .container .right {
+    width: 20%;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+}
+
+.students-showcase .container .right .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.students-showcase .container .right .title h4 {
+    font-weight: 500;
+    padding: 15px 0px;
+}
+
+.students-showcase .container .right .students-filter {
+    display: flex;
+    flex-direction: column;
+}
+
+.students-showcase .container .right .students-filter form {
+    width: 100%;
+}
+
+.students-showcase .container .right .students-filter form select {
+    width: 100%;
+    border: 1px solid lightgray;
+    padding: 10px;
+}
+
+.students-showcase .container .right .students-filter form p {
+    padding: 10px 0px;
+}
+
+.students-showcase .container .right .students-filter form select option {
+    font-weight: bold;
+}
+
+.students-showcase .container .right .students-filter form select:focus {
+    outline: none;
+}
+
+#filtrar {
+    margin: 10px 0px;
+}
+
+.students-showcase .container .right .students-filter form input[type="submit"] {
+    padding: 5px 10px;
+    width: 100%;
+    font-family: "Open Sans";
+    font-weight: 700;
+    border: none;
+    color: #ffffff;
+    font-size: 1.2em;
+    background-color: #5246F2;
+    transition: color, background-color 0.5s;
+}
+
+.students-showcase .container .right .students-filter form input[type="submit"]:hover {
+    background-color: #008b40;
+}
+
+/* --- End Students --- */
+
+
+/* --- New Project --- */
+
+
+
+/* --- Footer --- */
+
+footer {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    background-color: #FFFFFF;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .container .top {
+    display: flex; 
+    align-items: center;
+}
+
+footer .container .top .logo, footer .container .top .counter {
+    width: 50%;
+}
+
+footer .container .top .counter {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .container .top .counter h3 {
+    font-weight: 400;
+    padding: 0px 10px;
+    color: black;
+    text-transform: uppercase;
+}
+
+footer .container .top .counter h3 span {
+    font-weight: 600;
+}
+
+footer .container .middle {
+    display: flex;
+    border-top: 1px solid lightgray;
+    margin: 10px 0px;
+}
+
+
+footer .container .middle a {
+    padding: 25px 15px;
+    color: black;
+    font-weight: 300;
+    font-size: 0.9em;
+    transition: color 0.7s;
+}
+
+footer .container .middle a:hover {
+    color: #62669C;
+}
+
+footer .container .bottom p{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+/* --- End Footer --- */
+
+
+
+/* --- Index --- */
+
+.index .banner  {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+.index .banner .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.index .banner .container .title h2 {
+    width: 50%;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 2.5em;
+}
+
+
+.index .banner .container .subtitle h3{
+    width: 50%;
+    font-weight: 300;
+    text-align: justify;
+    padding: 20px 0px;
+    text-transform: uppercase;
+}
+
+.index .about-us {
+    height: auto;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.index .about-us .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.index .about-us .container .title h3 {
+    font-weight: 600;
+    font-size: 1.5em;
+    padding: 50px 0px 10px 0px;
+}
+
+.index .about-us .container .title h4 {
+    font-weight: 500;
+    text-align: center;
+}
+
+.index .about-us .container .images {
+    padding: 50px 0px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.index .about-us .container .images img {
+    height: 30px;
+}
+
+.index .how-works {
+    display: flex;
+    justify-content: center;
+    background-color: #252525;
+}
+
+.index .how-works img {
+    height: 420px;
+}
+
+.index .categories {
+    background-color: #252525;
+}
+
+/* --- End Index --- */

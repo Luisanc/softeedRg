@@ -10,9 +10,9 @@
 class coreController
 {
     public $adapter;
+    public $dataUser1;
 
-    public function __construct()
-    {
+    public function __construct(){
         require_once 'coreConection.php';
         require_once 'coreInits.php';
         require_once 'coreModel.php';
@@ -30,19 +30,25 @@ class coreController
     * Vista: Nombre de la vista
     * Datos: Informacion a mostrar en la vista
     */
-    public function loadView($vista,$datos){
+    public function loadView($vista,$datos,$data){
         foreach ($datos as $id_assoc => $valor) {
             ${$id_assoc}=$valor;
         }
 
         require_once 'coreUrl.php';
         $helper=new coreUrl();
+        $dataUser=$data;
         require 'aplication/views/header/header.php';
         require_once 'aplication/views/'.$vista.'.php';
+        require 'aplication/views/footer/footer.php';
     }
 
     /*Crea la accion y la url*/
     public function redirect($controlador=DEFAULT_CONTROLLER,$accion=DEFAULT_ACTION){
         header("Location:index.php?aplication/controllers=".$controlador."&action=".$accion);
+    }
+
+    public function login(){
+
     }
 }
